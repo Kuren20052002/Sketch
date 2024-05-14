@@ -3,10 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div id="nav-bar">
+        <div id="title">Etch-a-Sketch</div>
+        <div id="save-button"></div>
+    </div>
+    <div id="content">
+        <div id="control-panel">
+            <div id="pick-color-box">
+                <input type="color">
+            </div>
+            <button id="fill-grid">Fill</button>
+            <div id="color-finder">Eyedropper</div>
+            <div id="eraser">Eraser</div>
+            <button id="clear-grid">Clear</button>
+            <div id="resizer-container">
+                <input type="range" value="0" min="0" max="100">
+                <span id="size-indicator">25 X 25</span>
+            </div>
+        </div>
+        <div id="sketch-area">
+            
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
