@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    font-family: 'Arcade';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./IMG/landscape.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(75, 26, 26, 0.8);
+}
+
+@font-face {
+    font-family: Arcade;
+    src: url(./Fonts/ARCADE.TTF);
+}
