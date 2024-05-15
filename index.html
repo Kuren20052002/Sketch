@@ -7,26 +7,31 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="nav-bar">
-        <div id="title">Etch-a-Sketch</div>
-        <div id="save-button"></div>
-    </div>
+    <div id="title">Etch-a-Sketch</div>
     <div id="content">
         <div id="control-panel">
             <div id="pick-color-box">
-                <input type="color">
+                <div id="color-container">
+                    <input type="color" id="color-grid" value="color">
+                </div>
+                <span>Pick a color</span>
             </div>
-            <button id="fill-grid">Fill</button>
-            <div id="color-finder">Eyedropper</div>
-            <div id="eraser">Eraser</div>
-            <button id="clear-grid">Clear</button>
+            <div class="divider">
+                <button class="action-button" id="clear">Clear Canvas</button>
+                <button class="action-button" id="fill">Fill Canvas</button>
+            </div>
+            <div class="divider">
+                <div class="mode-button" id="rainbow">Rainbow Mode</div>
+                <div class="mode-button" id="eyedropper">Eyedropper</div>
+                <div class="mode-button" id="eraser">Eraser Mode</div>
+            </div>
             <div id="resizer-container">
-                <input type="range" value="0" min="0" max="100">
-                <span id="size-indicator">25 X 25</span>
+                <span id="size-indicator">Size: 50</span>
+                <input type="range" value="50" min="1" max="100" id="slider">
             </div>
         </div>
         <div id="sketch-area">
-            
+
         </div>
     </div>
     <script src="./script.js"></script>

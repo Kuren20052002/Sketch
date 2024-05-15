@@ -1,17 +1,158 @@
 body{
     margin: 0;
-    font-family: 'Arcade';
+    font-family: 'Roboto';
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(./IMG/landscape.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: inset 0 0 0 1000px rgba(75, 26, 26, 0.8);
+    background: linear-gradient(180deg, #115D81, #2C95B5, #e6ad81);
+    box-sizing: border-box;
 }
 
+#title{
+    font-size: 10vw;
+    font-weight: 900;
+    margin-top: 10vh;
+    color: white;
+    text-align: center;
+}
+
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10vh;
+    width: 100%;
+    height: 90vh;
+    margin: 10vh 0;
+}
+
+#control-panel{
+    display: flex;
+    flex-direction: column;
+    width: 40vh;
+    height: 80vh;
+    background: rgba(235, 235, 235, 0.27); 
+    border-radius: 15px; 
+    box-shadow: 0 0 5vh rgb(0, 0, 0); 
+    padding: 4vh;
+    gap: 3vh;
+}
+
+#pick-color-box{
+    display: flex;
+    align-items: center;
+    gap: 3vh;
+    margin-bottom: 1vh;
+}
+
+.divider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    margin-bottom: 2vh;
+}
+
+span{
+    font-size: 2vw;
+    color: white;
+}
+
+#color-container{
+    width: 12vh;
+    height: 12vh;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px black solid;
+}
+
+#color-grid{
+    width: 100%;
+    height: 100%;
+    transform: scale(5);
+    
+}
+
+.action-button{
+    width: 100%;
+    height: 8vh;
+    background-color: #30b5dd;
+    color:white;
+    font-size: 2vw;
+    font-weight: lighter;
+    border: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.668); 
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.action-button:hover{
+    box-shadow: 0 0 2vw rgb(255, 255, 255); 
+    background-color: #39d1ff;
+    cursor: pointer;
+}
+
+.mode-button{
+    width: 100%;
+    height: 8vh;
+    background-color: rgba(1,2,2,0);
+    color:white;
+    font-size: 2vw;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.668); 
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+#resizer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#slider{
+    width: 100%;
+    height: 5px;    
+    -webkit-appearance: none; /* Remove default styles (for WebKit browsers) */
+    appearance: none;
+    background: #39d1ff;
+}
+
+#slider::-webkit-slider-thumb{
+    -webkit-appearance: none; /* Remove default styles (for WebKit browsers) */
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+#sketch-area{
+    width: 80vh;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background: rgba(255, 255, 255);
+    box-shadow: 0 0 5vh rgba(0, 0, 0, 1); 
+    border: 3px solid black;
+    padding: 10px;
+}
+
+
+
+
 @font-face {
-    font-family: Arcade;
-    src: url(./Fonts/ARCADE.TTF);
+    font-family: Roboto;
+    src: url(./Fonts/Roboto-Regular.ttf);
 }
