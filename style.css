@@ -137,16 +137,16 @@ span{
 }
 
 #sketch-area{
-    width: 80vh;
-    height: 80vh;
+    width: 640px;
+    height: 640px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    padding: 0;
     margin: 20px;
     background: rgba(255, 255, 255);
     box-shadow: 0 0 5vh rgba(0, 0, 0, 1); 
     border: 3px solid black;
-    padding: 10px;
 }
 
 
