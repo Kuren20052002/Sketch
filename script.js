@@ -26,6 +26,9 @@ function getColor(square){
 }
 
 function toggleMode(node){
+    const modeButtons = [rainbowButton, eyedropperButton, eraserButton];
+    
+    //toggle the node
     if(node.id === 'rainbow'){
         rainbow_mode = !rainbow_mode;
         node.classList.toggle('mode-button-unactivate', !rainbow_mode);
@@ -41,6 +44,27 @@ function toggleMode(node){
         node.classList.toggle('mode-button-unactivate', !eraser_mode);
         node.classList.toggle('mode-button-activate', eraser_mode);
     }
+
+    // //disable all mode beside node
+    modeButtons.forEach((button) => {
+        if(button !== node){
+            if(button.id === 'rainbow' && rainbow_mode){
+                rainbow_mode = false;
+                button.classList.toggle('mode-button-activate', false);
+                button.classList.toggle('mode-button-unactivate', true);
+            }
+            if(button.id === 'eyedropper' && eyedropper_mode){
+                eyedropper_mode = false;
+                button.classList.toggle('mode-button-activate', false);
+                button.classList.toggle('mode-button-unactivate', true);
+            }
+            if(button.id === 'eraser' && eraser_mode){
+                eraser_mode = false;
+                button.classList.toggle('mode-button-activate', false);
+                button.classList.toggle('mode-button-unactivate', true);
+            }
+        }
+    });
 }
 
 function changeColor(e){
@@ -82,7 +106,10 @@ function buildCanvas(size){
         });
 
         clone.addEventListener('click', function(e){
-                getColor(e.target);
+            if(!eyedropper_mode){
+                changeColor(e.target);
+            }
+            getColor(e.target);
         });
 
         container.appendChild(clone);
