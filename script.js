@@ -161,7 +161,10 @@ container.addEventListener('mouseup', function(){
 fillButton.addEventListener('click', function(){
     const squares = document.querySelectorAll('.square');
     squares.forEach((square) => {
-        square.style.backgroundColor = color.value;
+        if(rainbow_mode){
+            square.style.backgroundColor = randomRGB();
+        }
+        else square.style.backgroundColor = color.value;
     })
 });
 
